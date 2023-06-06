@@ -30,7 +30,7 @@ const CandyInfoForm=(props) =>{
                 <input type="text" id="name" ref={candyNameRef}/>
                 <label htmlFor="decription" >Description:</label>
                 <input id="description" ref={candyDescriptionRef}/>
-                <label htmlFor="price">Price(Rs)</label>
+                <label htmlFor="price">Price(Rs):</label>
                 <input type="number" id="price" ref={candyPriceRef}/>
                 <button id="addBtn" onClick={addCandyBtnHandler}>ADD CANDY</button>
             </form>
