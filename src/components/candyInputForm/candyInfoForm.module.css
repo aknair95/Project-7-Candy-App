@@ -5,6 +5,13 @@
     max-width: 60rem;
     display: block;
   }
+
+  .form-control h2 {
+    font-weight: bolder;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+  }
   
   .form-control label {
     display:block;
