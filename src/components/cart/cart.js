@@ -11,12 +11,12 @@ const Cart=(props) =>{
         return qtyCount+element.qty;
     },0) >0;
 
-    const filteredItems=cartItemsCtx.candyDetails.filter((item) =>{           //filtering array for items quantity>0
-        return Number(item.qty)>0; 
+    const filteredItems=cartItemsCtx.candyDetails.filter((item) =>{        //filtering array for items quantity>0
+        return Number(item.qty)>0;  
     });
 
     const onClickRemoveHandler=(e) =>{                  // function to dec. qty of cart item by 1
-       const item=e.target.name;                            
+       const item={name: e.target.name};                            
        cartItemsCtx.removeItem(item,1);
     }
 
@@ -53,7 +53,7 @@ const Cart=(props) =>{
     return(
         <Modal onClose={props.onClose}>
             <div className={classes.cartItems}>
-                {cartItemsStatus && cartItems}              
+                {cartItems}              
                 <div className={classes.total}>
                     <span>Total Price</span>
                     <span>{`Rs ${cartPrice}`}</span>
