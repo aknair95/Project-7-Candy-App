@@ -4,11 +4,11 @@ import CartContext from "./cartContext";
 const CartProvider=(props) =>{
 
     const [candys,updateCandys]=useState(props.candyDetails);      
-   
-    const addItemToCartHandler=(candy,Qty) =>{
-        const updatedCandyDetails=candys.map((element) =>{
-            if(element.name===candy.name){
-                return element.qty+=Qty;        
+    
+    const addItemToCartHandler=(item,Qty) =>{
+        const updatedCandyDetails=props.candyDetails.map((element) =>{
+            if(element.name===item.name){
+                element.qty=Number(element.qty)+Number(Qty);        
             }
             return element;
         })
@@ -16,9 +16,9 @@ const CartProvider=(props) =>{
     }
 
     const removeItemFromCartHandler=(candy,Qty) =>{
-        const updatedCandyDetails=candys.map((element) =>{
+        const updatedCandyDetails=props.candyDetails.map((element) =>{
             if(element.name===candy.name){
-                return element.qty-=Qty;               
+                element.qty=Number(element.qty)-Number(Qty);               
             }
             return element;
         })
