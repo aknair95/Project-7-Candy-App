@@ -7,11 +7,11 @@ const Btn=(props) =>{
 
     const onClickAddQtyHandler=(e) =>{
         const candy={name: e.target.name};
-        cartCtx.addItem(candy,e.target.qty);
+        cartCtx.addItem(candy,e.target.value);
     }
     return(
         <div className={classes.btn}>
-            <button id={props.id}  onClick={onClickAddQtyHandler}>{props.label}</button>
+            <button id={props.id} name={props.name} value={props.value} onClick={onClickAddQtyHandler}>{props.label}</button>
         </div> 
     )
 }

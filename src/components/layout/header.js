@@ -14,7 +14,7 @@ const Header=(props) =>{
         <div className={classes.mainImage}>
             <img src={candyImg} alt="World of candies"/> 
         </div> 
-        <CandyInfoForm/>  
+        <CandyInfoForm onAddCandyData={props.onAddCandyData}/>  
     </Fragment>
     )
 }
